@@ -7,3 +7,8 @@ Atau bisa berkontribusi pada repo orang lain dengan mengupdate dari repository o
 Perbedaan:
 > Fork: menduplikasi repository orang lain untuk pindah ke repository kita
 > Clone: menduplikasi repository dari remote atau GitHub ke komputer lokal kita
+
+
+Cara Forking ada 2, yaitu:
+1. Forking file: Klik langsung pada file di repository akun lain, lalu klik edit dengan tulisan "Fork this project and edit the file"
+2. Forking repository: Klik 'Fork' yang ada disamping repository akun lain 
