@@ -4,3 +4,7 @@ GitHub: website/layanan berbasis cloud untuk mengelola project Git
 
 Git bisa untuk menghubungkan GitHub dengan komputer kita. Dengan syarat:
 >> Buat GitHub menjadi Remote (sumber dari repo di github), lalu repo nya di clone ke komputer. Baru bisa push dan pull
+
+Untuk melihat commit dalam bentuk titik horizontal secara visual: 
+- Klik Insight (pada menu yang ada di atas)
+- Klik Network (yang ada di sebelah kiri)
