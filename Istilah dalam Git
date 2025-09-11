@@ -9,3 +9,7 @@ Istilah yang dipakai di Git:
 - Clone = mengambil repo dari remote
 - Push = mengirim file/commit dari komputer ke repo (Github)
 - Pull = mengambil file/commit dari repo (Github) ke komputer
+- Snapshot = potret kondisi file atau folder
+- Head = ujung Branch yang mana merupakan commit terbaru 
+- HEAD = head yang sedang aktif. Walaupun di dalam satu Repository dapat memiliki banyak Branch, namun hanya satu yang aktif
+- Stagging = fitur unik di GIT yang tidak ada di version control lain. Dengan staging area, Anda dapat memilih perubahan mana yang akan di commit dan yang tidak.
