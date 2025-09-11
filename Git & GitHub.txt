@@ -8,3 +8,9 @@ Git bisa untuk menghubungkan GitHub dengan komputer kita. Dengan syarat:
 Untuk melihat commit dalam bentuk titik horizontal secara visual: 
 - Klik Insight (pada menu yang ada di atas)
 - Klik Network (yang ada di sebelah kiri)
+
+Alasan tidak bisa merge: 
+- Ada konflik
+- Branch belum di-commit
+- History branch tidak sinkron
+- Protection rules (di GitHub/GitLab)
