@@ -11,6 +11,25 @@ Untuk melihat commit dalam bentuk titik horizontal secara visual:
 
 Alasan tidak bisa merge: 
 - Ada konflik
+Cara: 
+  > Jalankan merge: git merge nama-branch
+  > Kalau muncul konflik, buka file yang ditandai <<<<<<<, =======, >>>>>>>.
+  > Edit manual pilih versi yang benar, lalu: 
+    git add <file_yang_selesai_diedit>
+    git commit
 - Branch belum di-commit
+Cara: 
+  > Simpan dulu dengan commit atau stash:
+    git add .
+    git commit -m "Save progress"
+  > Setelah itu lakukan merge
 - History branch tidak sinkron
+Cara:
+  > Update dulu branch tujuan (misalnya main):
+    git checkout main
+    git pull origin main
+  > Lakukan merge
 - Protection rules (di GitHub/GitLab)
+Cara:
+  > Merge lewat Pull Request (PR).
+  > Atau minta izin admin repo untuk merge langsung.
