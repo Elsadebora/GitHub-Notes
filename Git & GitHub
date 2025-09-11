@@ -1,0 +1,6 @@
+Version Control System (VCS): Sistem yang menyimpan & mengelola rekaman perubahan dari source code
+Git: software yang bisa melakukan VCS 
+GitHub: website/layanan untuk mengelola project Git
+
+JGit bisa untuk menghubungkan GitHub dengan komputer kita. Dengan syarat:
+>> Buat GitHub menjadi Remote (sumber dari repo di github), lalu repo nya di clone ke komputer. Baru bisa push dan pull
