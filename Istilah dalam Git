@@ -1,0 +1,11 @@
+Istilah yang dipakai di Git:
+- Repository = folder project
+- Commit = history perubahan/snapshot, 1 commit akan direkam dengan 1 snapshot
+- Hash = penanda unik pada sebuah commit, yang string angka panjang
+- Checkout = pindah ke sebuah commit
+- Branch = cabang bebas dari sebuah commit dari sumber yang sama, misal commit ke-2, mau ngerjain hal lain diluar jalur commit ke-3 dan seterusnya (biasanya kerja tim yang bisa dibagi2 tugasnya) atau membuat cabang baru
+- Merge = menggabungkan 2 atau lebih commit dari branch ke master branch
+- Remote = sumber yang memiliki repo
+- Clone = mengambil repo dari remote
+- Push = mengirim file/commit dari komputer ke repo (Github)
+- Pull = mengambil file/commit dari repo (Github) ke komputer
