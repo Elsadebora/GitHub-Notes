@@ -10,26 +10,31 @@ Untuk melihat commit dalam bentuk titik horizontal secara visual:
 - Klik Network (yang ada di sebelah kiri)
 
 Alasan tidak bisa merge: 
-- Ada konflik
+1. Ada konflik
+  ^Terjadi kalau dua branch mengubah bagian kode/baris yang sama.
+  ^Git bingung harus pakai perubahan yang mana, jadi perlu diselesaikan manual.
 Cara: 
   > Jalankan merge: git merge nama-branch
   > Kalau muncul konflik, buka file yang ditandai <<<<<<<, =======, >>>>>>>.
   > Edit manual pilih versi yang benar, lalu: 
     git add <file_yang_selesai_diedit>
     git commit
-- Branch belum di-commit
+2. Branch belum di-commit
+  ^Kalau ada perubahan lokal yang belum di-commit atau di-stash, Git tidak mau merge supaya perubahanmu tidak hilang
 Cara: 
   > Simpan dulu dengan commit atau stash:
     git add .
     git commit -m "Save progress"
   > Setelah itu lakukan merge
-- History branch tidak sinkron
+3. History branch tidak sinkron
+  ^Misalnya, branch tujuan sudah maju lebih jauh (ada commit baru), tapi branch kamu belum di-update
 Cara:
   > Update dulu branch tujuan (misalnya main):
     git checkout main
     git pull origin main
   > Lakukan merge
-- Protection rules (di GitHub/GitLab)
+4. Protection rules (di GitHub/GitLab)
+  ^Kadang branch main/master dilindungi (protected branch). Jadi merge hanya bisa lewat pull request atau butuh approval
 Cara:
   > Merge lewat Pull Request (PR).
   > Atau minta izin admin repo untuk merge langsung.
