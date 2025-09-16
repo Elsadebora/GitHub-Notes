@@ -13,3 +13,25 @@ Recommend for beginner: VS Code & Notepad+++
 
 Link untuk download VS Code: https://code.visualstudio.com
 Link untuk download Notepad++: https://notepad-plus-plus.org
+
+
+GIT COMMAND (LOCAL)
+- $ git init = untuk menginisialisasi repo git di komputer
+- $ git add <file(s)> = buat nambahin file ke dalam staging area
+- $ git status = untuk mengetahui status repo kita 
+- $ git commit = 
+- $ git config = 
+- $ git branch = 
+- $ git help = 
+
+3 area pada repo Git:
+- Working tree: area tempat bekerja (folder yang diisi file-file projectnya)
+- Staging area: memberikan info ke Git bahwa ada perubahan yang dilakukan 
+- History: setelah di commit, maka akan masuk ke dalam History
+
+Staging area dan History akan masuk ke dalam folder yang bernama .git
+
+Dari Working tree ke Staging area: gunakan $ git add (simpan perubahan ke stagging area)
+Dari Staging area ke History: gunakan $ git commit (untuk menyimpan perubahan tersebut)
+
+
