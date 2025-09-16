@@ -1,0 +1,15 @@
+Download Git di https://git-scm.com/
+E-book Git dapat di download di https://git-scm.com/book/en/v2
+
+Saat install aplikasi Git, terdapat beberapa pilihan "editor default untuk Git" yaitu:
+- Vim (the ubiquitous text editor): untuk Linux/Unix dan advanced
+- Nano: lebih sederhana dari Vim, dapat untuk pemula
+- Notepad++: bisa untuk pemula, umum digunakan di Windows
+- Visual Studio Code (VS Code): bisa untuk pemula, editor modern, biasa digunakan developer, Ada dua opsi yaitu VS Code (stabil) dan VS Code Insiders (versi beta/terbaru)
+- Sublime Text: editor teks cepat dan ringan, populer juga di kalangan programmer
+- Atom: editor dari GitHub (sekarang sudah tidak aktif dikembangkan, tapi masih ada yang pakai)
+
+Recommend for beginner: VS Code & Notepad+++
+
+Link untuk download VS Code: https://code.visualstudio.com
+Link untuk download Notepad++: https://notepad-plus-plus.org
