@@ -16,7 +16,7 @@ Link untuk download Notepad++: https://notepad-plus-plus.org
 
 
 GIT COMMAND (LOCAL)
-- $ git init = untuk menginisialisasi repo git di komputer
+- $ git init = untuk menginisialisasi repo git di komputer, atau membuat folder di komputer lokal sebagai (MASTER) nya seperti yang ada di GitHub
 - $ git add <file(s)> = buat nambahin file ke dalam staging area
 - $ git status = untuk mengetahui status repo kita 
 - $ git commit = 
@@ -35,3 +35,30 @@ Dari Working tree ke Staging area: gunakan $ git add (simpan perubahan ke staggi
 Dari Staging area ke History: gunakan $ git commit (untuk menyimpan perubahan tersebut)
 
 
+CARA buat repo di GIT BASH:
+$ pwd = print working directory, untuk menunjukan posisi working sedang dimana
+$ ls = list folder yang ada di working directory
+$ cd <nama folder> = change directory ke <nama folder> atau untuk mengubah working directory, dimana nama foldernya lebih bagus jika diberi '-' bukan spasi agar dapat terbaca
+
+Cara save new file di GIT BASH:
+Setelah save di editor (dalam hal ini, VS Code), maka jangan lupa untuk masukkan file yang di save ke stagging area dengan cara $ git add
+Setelah masuk ke stagging area, file tersebut di commit lagi dengan cara:
+ $ git config --global user.name "YOUR NAME" 
+ $ git config --global user.email "YOUR EMAIL" (email yang sama dengan yang dipakai di GitHub)
+lalu enter
+ $ git commit -m "YOUR MESSAGE" (untuk menambahkan pesan)
+jika hanya $ git commit tanpa -m "" maka akan masuk ke dalam VS Code/Vim (tinggal klik silang di VS Code atau ketik q! untuk keluar tanpa save) 
+lalu enter
+
+atau
+$ git add . = untuk add >1 fle untuk dipindahkan ke stagging area baik file yang di edit, ditambahkan, atau file yang di delete
+
+CARA tracking file yang sudah di commit (history):
+$ git log = untuk semua file
+$ git log -- <nama file> = untuk liat history commit apa saja pada 1 file yang diinginkan
+$ git log -3 = untuk 3 commit terakhir yang dilakukan
+
+
+CARA untuk mengembalikan file yang sudah terhapus ke keadaan commit terakhir
+$ git checkout <5 digit pertama dari commit hash nya> -- <nama file> = untuk nama file di akhir agar yang dikembalikan hanya file yang diinginkan saja
+  (karena 5 digit pertama pada commit bisa saja commit yang dilakukan ada banyak, yaitu edit, nambah, delete file yang berbeda)
