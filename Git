@@ -34,13 +34,14 @@ Staging area dan History akan masuk ke dalam folder yang bernama .git
 Dari Working tree ke Staging area: gunakan $ git add (simpan perubahan ke stagging area)
 Dari Staging area ke History: gunakan $ git commit (untuk menyimpan perubahan tersebut)
 
+--------------------------------------------------
 
-CARA buat repo di GIT BASH:
+CARA BUAT REPO di GIT BASH:
 $ pwd = print working directory, untuk menunjukan posisi working sedang dimana
 $ ls = list folder yang ada di working directory
 $ cd <nama folder> = change directory ke <nama folder> atau untuk mengubah working directory, dimana nama foldernya lebih bagus jika diberi '-' bukan spasi agar dapat terbaca
 
-Cara save new file di GIT BASH:
+CARA SAVE NEW FILE di GIT BASH:
 Setelah save di editor (dalam hal ini, VS Code), maka jangan lupa untuk masukkan file yang di save ke stagging area dengan cara $ git add
 Setelah masuk ke stagging area, file tersebut di commit lagi dengan cara:
  $ git config --global user.name "YOUR NAME" 
@@ -53,12 +54,45 @@ lalu enter
 atau
 $ git add . = untuk add >1 fle untuk dipindahkan ke stagging area baik file yang di edit, ditambahkan, atau file yang di delete
 
-CARA tracking file yang sudah di commit (history):
+atau bisa dijadikan 1 step untuk commit (syarat: VS Code sudah status M/modified atau sudah pernah di save dan git add)
+$ git commit -a -m "PESAN"     atau
+$ git commit -am "PESAN"
+
+CARA TRACKING FILE yang sudah di commit (history):
 $ git log = untuk semua file
 $ git log -- <nama file> = untuk liat history commit apa saja pada 1 file yang diinginkan
 $ git log -3 = untuk 3 commit terakhir yang dilakukan
 
 
-CARA untuk mengembalikan file yang sudah terhapus ke keadaan commit terakhir
+CARA UNTUK MENGEMBALIKAN FILE yang sudah terhapus ke keadaan commit terakhir
 $ git checkout <5 digit pertama dari commit hash nya> -- <nama file> = untuk nama file di akhir agar yang dikembalikan hanya file yang diinginkan saja
   (karena 5 digit pertama pada commit bisa saja commit yang dilakukan ada banyak, yaitu edit, nambah, delete file yang berbeda)
+
+---------------------------------------------------
+
+CARA MEMBUAT BRANCH
+$ git branch <nama-branch>
+
+untuk menampilkan branch yang ada bisa lakukan:
+$ git log --all --decorate --online --graph 
+dan bisa di sederhanakan menjadi nama lain yang diinginkan tanpa mengetik "--all --decorate --online --graph "
+misal:
+ $ alias graph="git log --all --decorate --online --graph"
+
+CARA PINDAH BRANCH 
+untuk mengubah pointer head-nya atau berpindah ke branch lain:
+$ git checkout <nama-branch>
+
+dan ketika di check menggunakan $ git branch, ditandai dengan warna hijau di tulisan branch-nya yang artinya head-nya sudah berpindah
+atau akan ada tulisan "HEAD -> <di cabang yang sudah dipindah>" saat ketik $ git log --all --decorate --online --graph 
+
+----------------------------------------------------------
+
+CARA MELAKUKAN MERGE
+2 jenis merge:
+- Fast Forward = terjadi ketika branch yang ingin digabungkan berada di jalur langsung (direct path)
+- Three-way Merge 
+
+
+
+
