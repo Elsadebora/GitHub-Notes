@@ -23,6 +23,7 @@ GIT COMMAND (LOCAL)
 - $ git config = 
 - $ git branch = 
 - $ git help = 
+- $ git checkout = untuk mengubah pointer head atau pindah ke branch/master file
 
 3 area pada repo Git:
 - Working tree: area tempat bekerja (folder yang diisi file-file projectnya)
@@ -75,9 +76,13 @@ $ git branch <nama-branch>
 
 untuk menampilkan branch yang ada bisa lakukan:
 $ git log --all --decorate --online --graph 
-dan bisa di sederhanakan menjadi nama lain yang diinginkan tanpa mengetik "--all --decorate --online --graph "
+dan bisa di sederhanakan menjadi nama lain yang diinginkan tanpa mengetik "--all --decorate --oneline --graph "
 misal:
  $ alias graph="git log --all --decorate --online --graph"
+dimana:
+--oneline → menyingkat setiap commit jadi 1 baris.
+--graph → menampilkan garis cabang (visualisasi branch).
+--all → menampilkan semua branch, bukan hanya yang sedang aktif.
 
 CARA PINDAH BRANCH 
 untuk mengubah pointer head-nya atau berpindah ke branch lain:
@@ -91,8 +96,33 @@ atau akan ada tulisan "HEAD -> <di cabang yang sudah dipindah>" saat ketik $ git
 CARA MELAKUKAN MERGE
 2 jenis merge:
 - Fast Forward = terjadi ketika branch yang ingin digabungkan berada di jalur langsung (direct path)
-- Three-way Merge 
+- Three-way Merge = terdapat 2 branch dari satu asal yang sama yang ingin digabung. Jadi, antara file asal dan file yang sedang dikerjakan/branch baru di merge, akan digabungkan 
 
+Cara merge:
+Pindahkan dulu head pointernya ke file master (dalam hal ini file-nya akan merge master ke branch-nya) dengan $ git checkout master 
+lalu
+$ git merge <file>  /// $ git merge dosen --> merge dari file master ke dosen (contoh)
 
+----------------------------------------------------------
 
+CARA MENGHAPUS BRANCH YANG SUDAH DI MERGE ATAU HANYA INGIN MENGHAPUS SAJA
+>> Untuk menghapus branch yang SUDAH di merge
+Untuk mengetahui branch mana yang sudah di merge agar berhati-hati sebelum menghapus branch:
+$ git branch --merged 
 
+lalu jika sudah yakin untuk MENGHAPUS:
+$ git branch -d <nama file yang mau dihapus>
+
+>> Untuk menghapus file yang INGIN dihapus saja
+$ git branch -D <nama file>
+
+---------------------------------------------------------
+
+CARA MELAKUKAN THREE-WAY MERGE
+Pastikan pointer head-nya ada di master
+lalu
+ $ git merge <nama file yang mau di merge> 
+akan terbuka editor di VS Code, bisa edit untuk commite message-nya atau memakai yang auto dari VS Code dan langsung save
+
+jangan lupa hapus branch yang sudah di merge jika tidak diperlukan dengan $ git branch -d <nama file yang mau dihapus>
+lalu cek dengan $ git branch
