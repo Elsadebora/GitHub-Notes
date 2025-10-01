@@ -126,3 +126,47 @@ akan terbuka editor di VS Code, bisa edit untuk commite message-nya atau memakai
 
 jangan lupa hapus branch yang sudah di merge jika tidak diperlukan dengan $ git branch -d <nama file yang mau dihapus>
 lalu cek dengan $ git branch
+
+
+--------------------------------------------------------
+
+MERGE CONFLICT
+Conflict terjadi karena 2 branch mengerjakan baris yang sama dalam 1 repository.
+Saat gunakan $ git merge <nama file yang mau digabung> akan auto terbuka file di VS Code dengan 2 warna yaitu:
+- Warna HIJAU dengan tanda '<<<<< HEAD (current change)' : data yang berubah pada branch yang aktif 
+- Warna BIRU dengan tanda '>>>>> <nama file yang mau digabungkan> (incoming change)' : data yang berubah di branch yang mau digabungkan
+
+>> CARA RESOLVE MANUAL
+- Analisis dan pilih sendiri mana yang mau dihapus dan yang digunakan
+- Hapus git marker-nya (yang ada tulisan <<<<, >>>>, dan =====)
+- Save VS Code
+- Kembali ke Git Bash
+  $ git add . atau $ git commit -am "<pesan>"
+- Jangan lupa hapus branch yang sudah tidak dipakai/sudah digabungkan dengan branch yang aktif
+  $ git branch -d <nama file>
+
+------------------------------------------------------
+
+CARA CHECKOUT KE COMMIT (BUKAN BRANCH)
+Dapat terjadi saat kita mau mundur ke commit yang sebelumnya sudah kita lakukan.
+caranya:
+- Ketik $ git log untuk melihat perubahan yang ingin diambil
+- Ketik $ git checkout <7 digit dari commit yang diinginkan>
+  dan akan muncul kalimat "You are in 'detached HEAD' state." yang artinya point Head lepas dari branch
+- Ketik $ git branch atau $ git log --all --decorate --oneline --graph untuk tau branch dan grafik branch-nya
+
+-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
