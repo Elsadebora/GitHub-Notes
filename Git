@@ -24,6 +24,8 @@ GIT COMMAND (LOCAL)
 - $ git branch = 
 - $ git help = 
 - $ git checkout = untuk mengubah pointer head atau pindah ke branch/master file
+- $ git add . = untuk add >1 fle untuk dipindahkan ke stagging area baik file yang di edit, ditambahkan, atau file yang di delete
+- $ cd .. = kembali ke folder sebelumnya. Misal Dekstop > File Git, maka akan berpindah ke file Dekstop 
 
 3 area pada repo Git:
 - Working tree: area tempat bekerja (folder yang diisi file-file projectnya)
