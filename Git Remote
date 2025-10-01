@@ -16,4 +16,60 @@ CLONE DARI REPOSITORY DI GITHUB
 5. Buka file di local yang akan jadi tempat menyimpan file dari GitHub, lalu klik kanan dan klik "Git Bash Here"
 6. Pada Git Bash, tulis: 
    $ git clone <paste link clone HTTPS"
+7. Setelah itu, cek folder dalam local dan akan terlihat file di GitHub sudah terhubung ke local.
 
+Perbedaan clone dengan download:
+ Clone: terhubung secara remote
+ Download: hanya mengambil file-nya saja dari GitHub ke local 
+
+-------------------------------------------------------
+
+CARA MEMAKAI VS CODE
+-	Drag folder/repo yang di clone pada local ke VS Code
+-	Buka Git Bash
+   > Ketik $ ls untuk melihat file apa saja yang ada di repo tersebut
+   > Ketik $ cd <nama-repo>
+   > Ketik $ git remote  lalu ada tulisan “origin” yaitu nama default Remote saat pertama kali cloning GitHub ke local, nanti bisa diubah.
+   > Ketik $ git remote -v  untuk menampilkan daftar remote repository yang terhubung dengan repo local, lengkap dengan URL-nya. Jadi berguna untuk cek repo local tersebut terhubung ke remote mana. Hasilnya ada fetch dan push.
+    Fetch: URL yang digunakan saat menarik data (git fetch, git pull)
+    Push: url yang digunakan saat mendorong perubahan (git push) 
+   > Ketik $ git status  akan ada tulisan “Your branch is ahead of 'origin/main' by 1 commit” artinya commit terbaru sudah tersimpan di local, namun belum di-push ke GitHub/remote.
+
+
+CARA BUAT NEW FILE DARI VS CODE & PUSH
+-	Buka VS Code yang sudah ada repo remote hasil cloning
+-	Klik new file pada repo tersebut, lalu edit
+-	Buka Git Bash
+-	Ketik $ git status  untuk melihat file yang ada di working area
+-	Jika ada file di working area, maka pindahkan ke stagging area dengan
+   $ git add . atau $ git commit -am “<keterangan commit>”
+-	Lalu saat klik $ git log –all –decorate –oneline –graph dan ada muncul tulisan 
+   <7 digit commit> (HEAD  main) <massage commit>
+   <7 digit commit> (origin/master, origin/HEAD) <initial commit/commit sebelumnya> 
+   Artinya kita harus kirim perubahan ke remote, dengan perintah PUSH
+-	Lakukan push dengan cara 
+   $ git push  lalu akan ada perintah login github untuk menghubungkan local dengan GitHub
+-	Jika sudah, cek dengan $ git status 
+   Jika berhasil, maka akan tertulis “Your branch is up to date with 'origin/main'.”
+   Dan cek dengan $ git log –all –decorate –oneline –graph maka akan muncul:
+   Before: 
+   <7 digit commit> (HEAD  main) <massage commit>
+   <7 digit commit> (origin/master, origin/HEAD) <initial commit/commit sebelumnya> 
+   After:
+   <7 digit commit> (HEAD  main, origin/master, origin/HEAD) <massage commit>
+
+----------------------------------------------------------
+
+PERBEDAAN AKUN GITHUB DENGAN LOCAL
+Dapat terjadi perbedaan antara akun yang melakukan commit dengan email akun karena settingan user name dan email di git local berbeda dengan akun yang ada dipakai di GitHub atau sederhananya punya 2 akun GitHub, dan git local-nya mendeteksi akun yang lain bukan akun GitHub yang di cloning sehingga yang terlihat di GitHub saat push yaitu akun ke-2 melakukan commit di akun GitHub yang di cloning awal (akun ke-1).
+
+Jika terjadi hal tersebut, maka lakukan sebagai berikut:
+-	Ketik $ git config --list 
+-	Ketik $ git config --global  agar berlaku untuk semua repo/folder di computer. Jadi sekali atur otomatis kepake di semua project
+atau $ git config --local  khusus untuk 1 repo tertentu atau yang diedit saja, tapi untuk repo yang lain tetap dalam --global. Ini terjadi jika terdapat tiap repo punya login yang berbeda
+-	Jika pakai global, maka 
+   $ git config --global user.name “<username-nya>”
+   $ git config –global user.email “<user-email>”
+-	Lalu cek dengan $ git config --list
+
+file konfigurasi biasanya disimpan di: C:\Users\USER\<username>\.gitconfig (Windows)
