@@ -1,0 +1,14 @@
+Fork/forking: 
+Proses menduplikasi/proses copy repository dari akun lain ke akun kita beserta semua history dengan memberikan Credit yang menyatakan mengambil dari mana (source) tanpa mengganggu repository asli-nya.
+Sehingga dapat dengan mudah memodifikasi repository original untuk digunakan di project kita sendiri.
+Atau bisa berkontribusi pada repo orang lain dengan mengupdate dari repository original untuk digabungkan dengan repository aslinya. Dengan kata lain melakukan "Pull Request"
+
+*Fork ≠ Clone*
+Perbedaan:
+> Fork: menduplikasi repository orang lain untuk pindah ke repository kita
+> Clone: menduplikasi repository dari remote atau GitHub ke komputer lokal kita
+
+
+Cara Forking ada 2, yaitu:
+1. Forking file: Klik langsung pada file di repository akun lain, lalu klik edit dengan tulisan "Fork this project and edit the file"
+2. Forking repository: Klik 'Fork' yang ada disamping repository akun lain 
