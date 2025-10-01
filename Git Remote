@@ -1,0 +1,19 @@
+Git lokal yang akan dihubungkan dengan GitHub. 
+
+Remote = duplikat dari repo yang kita punya
+Push = mengirim perubahan dari local ke remote
+Pull = menarik perubahaan dari remote ke local
+
+Dalam kasus ini, gunakan GitHub sebagai Repo. 
+
+--------------------------------------------------------
+
+CLONE DARI REPOSITORY DI GITHUB
+1. Buka Repo yang adai di GitHub
+2. Klik "<> Code" yang berwarna hijau di sebelah atas kanan
+3. Ada 2 cara Clone, yaitu menggunakan HTTPS dan SSH. Jika pakai SSH, harus melakukan konfigurasi key-nya dahulu di komputer/lokal, jadi menghubungkan GitHub dengan local memakai key.
+4. Copy clone menggunakan HTTPS
+5. Buka file di local yang akan jadi tempat menyimpan file dari GitHub, lalu klik kanan dan klik "Git Bash Here"
+6. Pada Git Bash, tulis: 
+   $ git clone <paste link clone HTTPS"
+
